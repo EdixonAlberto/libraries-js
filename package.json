@@ -1,0 +1,29 @@
+{
+  "name": "libraries-js",
+  "version": "1.0.0",
+  "description": "pagina web realizada con vue.js para mostrar lista de librerías js",
+  "main": "",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdixonAlberto/libraries-js.git"
+  },
+  "keywords": [
+    "vue",
+    "webpack",
+    "babel",
+    "libraries"
+  ],
+  "author": {
+    "name": "Edixon Alberto",
+    "email": "edixonalbertto@gmail.com"
+  },
+  "license": "MIT",
+  "homepage": "https://edixonalberto.github.io/libraries-js",
+  "dependencies": {
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
