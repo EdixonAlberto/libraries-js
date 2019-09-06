@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>librerias-js</title>
+
+    <!-- STYLES CSS -->
+    <link rel="stylesheet" href="./node_modules/hint.css/hint.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1 id="title-js">Librerías para JavaScript</h1>
+            <img id="logo-js" src="./assets/img/javascript.png" alt="logo-js" />
+        </header>
+        <div>
+            <library-list></library-list>
+        </div>
+    </div>
+
+    <!-- SCRIPTS JS -->
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <script>
+        Vue.component('npm-comand', {
+            props: {
+                comand: String
+            },
+            template: `
+                <div>
+                    <strong>Npm:</strong>
+                    <span class="npm-comand"> $ {{ comand }}</span>
+                    <button class="copy-button hint--top hint--rounded"
+                        :data-hint="message"
+                        :class="{ 'hint--success': copied }"
+                        @click='onClick'>
+                    Copy</button>
+                </div>
+            `,
+            data: function () {
+                return {
+                    message: 'Copy to clipboard',
+                    copied: false
+                }
+            },
+            methods: {
+                onClick: function () {
+                    const input = document.createElement('input');
+
+                    input.setAttribute('value', this.comand);
+                    document.body.appendChild(input);
+                    input.select();
+
+                    document.execCommand('copy');
+                    document.body.removeChild(input);
+
+                    this.message = 'Copied!';
+                    this.copied = true;
+                }
+            }
+        });
+
+        Vue.component('library', {
+            props: {
+                name: String,
+                description: String,
+                github: String,
+                npm: String,
+                cdn: String
+            },
+            template: `
+                <li>
+                    <strong id="lib-name">{{ name }}</strong> {{ description }} <br />
+                    <strong>Github</strong> <a :href="github">{{ github }}</a> <br />
+                    <npm-comand :comand="npm"></npm-comand>
+                    <strong>Cdn:</strong> <a :href="cdn">{{ cdn }}</a> <br />
+                    <br />
+                </li>
+            `
+        });
+
+        Vue.component('library-list', {
+            data: function () {
+                return {
+                    libraries: [
+                        {
+                            name: 'Chartjs',
+                            description: 'Gráficos JavaScript simples pero flexibles para diseñadores y desarrolladores',
+                            github: 'https://www.chartjs.org',
+                            npm: 'npm i chart.js',
+                            cdn: 'http://path.com'
+                        },
+                        {
+                            name: 'Axios',
+                            description: 'Cliente HTTP basado en promesas para el navegador y node.js',
+                            github: 'https://github.com/axios/axios',
+                            npm: 'npm i axios',
+                            cdn: 'http://path.com'
+                        }
+                    ]
+                }
+            },
+            template: `
+                <ul>
+                    <library
+                        v-for="(lib, index) in libraries"
+                        :key="index"
+                        :img="lib.img"
+                        :name="lib.name"
+                        :description="lib.description"
+                        :github="lib.github"
+                        :npm="lib.npm"
+                        :cdn="lib.cdn">
+                    </library>
+                </ul>
+            `
+        });
+
+        new Vue({
+            el: '#app'
+        });
+    </script>
+</body>
+
+</html>

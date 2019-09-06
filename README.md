@@ -9,10 +9,11 @@
 
 Pagina Web realizada con Vue.js para mostrar lista de librerías js
 
-### Utilidades
+### Tecnologías usadas
 
-- Vue **2.9.6**
+- vue **2.9.6**
 - live-server **1.2.1**
+- hint.css": **2.6.0**
 
 ### Ejecutar
 

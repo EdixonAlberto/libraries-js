@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    /* border: 1px solid red; */
+}
+
+body {
+    background: #f3f3f3;
+    font-family: 'Roboto', sans-serif
+}
+
+a {
+    color: #ac0000ea;
+    font-weight: bold;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    display: flex;
+    background: #F7DF1E;
+    margin: -8px;
+    margin-bottom: 30px;
+    margin: 80px, auto;
+}
+
+#title-js {
+    margin: 20px 0px;
+    margin-left: auto;
+    width: 260px;
+    text-align: center;
+}
+
+#logo-js {
+    margin-top: 8px;
+    margin-right: auto;
+    width: 80px;
+    height: 80px;
+    border: 3px solid black;
+}
+
+#app {
+    line-height: 32px;
+}
+
+#lib-name {
+    font-size: 25px;
+    padding: 4px;
+    border: 2px solid black;
+    color: black;
+    background: #F7DF1E;
+}
+
+.npm-comand {
+    background: #e8e8e8;
+    border-left: 10px solid black;
+    font-family: "Consolas";
+    padding: 7px;
+    line-height: 45px;
+    padding-right: 80px;
+}
+
+.copy-button {
+    background: transparent;
+    font-size: 80%;
+    font-weight: bold;
+    padding: 7px;
+    border: none;
+    margin-left: -60px;
+    border-radius: 6px;
+}
+
+.copy-button:hover {
+    cursor: pointer;
+    background: #F7DF1E;
+}
+
+@media screen and (max-width: 400px) {
+    #title-js {
+        margin-left: 5px;
+    }
+
+    #logo-js {
+        margin-top: 25px;
+        margin-right: 20px;
+    }
+}
