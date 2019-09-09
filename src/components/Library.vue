@@ -1,26 +1,28 @@
 <template>
   <li>
-    <strong id="lib-name">{{ name }}</strong>
-    {{ description }}
-    <br />
-    <strong>Github</strong>
-    <a :href="github">{{ github }}</a>
-    <br />
-    <Comand :npm="npm"></Comand>
-    <strong>Cdn:</strong>
-    <a :href="cdn">{{ cdn }}</a>
-    <br />
-    <br />
+    <div>
+      <span id="lib-name">{{ name }}</span>
+      <span>{{ description }}</span>
+    </div>
+    <div>
+      <strong>Github:</strong>
+      <a :href="github">{{ github }}</a>
+    </div>
+    <Command :npm="npm"></Command>
+    <div>
+      <strong>Cdn:</strong>
+      <a :href="cdn">{{ cdn }}</a>
+    </div>
   </li>
 </template>
 
 <script>
-import Comand from "./Comand.vue";
+import Command from "./Command.vue";
 
 export default {
   name: "Library",
   components: {
-    Comand
+    Command
   },
   props: {
     name: String,
