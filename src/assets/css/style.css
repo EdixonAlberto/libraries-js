@@ -2,70 +2,70 @@
 
 /* DEBUG: */
 /* * {
-    border: 1px solid red;
+  border: 1px solid red;
 } */
 
 body {
-    background: #f3f3f3;
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
+  background: #f3f3f3;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    display: flex;
-    background: #F7DF1E;
+  display: flex;
+  background: #f7df1e;
 }
 
 #title-js {
-    font-size: 33px;
-    margin: 20px 0px;
-    margin-left: auto;
-    width: 260px;
-    text-align: center;
+  font-size: 33px;
+  margin: 20px 0px;
+  margin-left: auto;
+  width: 260px;
+  text-align: center;
 }
 
 #logo-js {
-    margin: 20px 0;
-    margin-right: auto;
-    width: 74px;
-    border: 3px solid black;
+  margin: 20px 0;
+  margin-right: auto;
+  width: 74px;
+  border: 3px solid black;
 }
 
 ul {
-    display: block;
-    line-height: 35px;
-    margin: 30px;
-    padding: 0;
+  display: block;
+  line-height: 35px;
+  margin: 30px;
+  padding: 0;
 }
 
 li {
-    list-style: none;
-    margin: 0;
-    margin-bottom: 30px;
-    padding-top: 2px;
+  list-style: none;
+  margin: 0;
+  margin-bottom: 30px;
+  padding-top: 2px;
 }
 
 #lib-name {
-    font-size: 21px;
-    font-weight: bold;
-    padding: 4px;
-    border: 2px solid black;
-    color: black;
-    background: #F7DF1E;
+  font-size: 21px;
+  font-weight: bold;
+  padding: 4px;
+  border: 2px solid black;
+  color: black;
+  background: #f7df1e;
 }
 
 a {
-    color: #ac0000ea;
+  color: #ac0000ea;
 }
 
 @media screen and (max-width: 400px) {
-    #title-js {
-        font-size: 30px;
-        margin: 20px -20px;
-    }
+  #title-js {
+    font-size: 30px;
+    margin: 20px -20px;
+  }
 
-    ul {
-        margin: 20px;
-    }
+  ul {
+    margin: 20px;
+  }
 }

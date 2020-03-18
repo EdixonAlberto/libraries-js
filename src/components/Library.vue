@@ -17,10 +17,10 @@
 </template>
 
 <script>
-import Command from "./Command.vue";
+import Command from './Command.vue';
 
 export default {
-  name: "Library",
+  name: 'Library',
   components: {
     Command
   },

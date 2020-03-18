@@ -2,14 +2,15 @@
   "name": "libraries-js",
   "version": "1.0.0",
   "description": "pagina web realizada con vue.js para mostrar lista de librerías javascript",
-  "main": "/src/main.js",
+  "main": "./src/main.js",
   "scripts": {
-    "clean": "rm -r dist",
-    "dev:stateSave": "webpack-dev-server --mode development --hot --inline --open",
-    "dev": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode development",
-    "prod": "npm run clean | webpack --mode production",
-    "start": "npm run dev"
+    "clean": "rm -r ./dist",
+    "lint": "prettier --write ./src/**/*.vue",
+    "start:prod": "yarn run build && live-server ./dist",
+    "start:dev": "webpack-dev-server --mode development --open",
+    "start:stateSave": "webpack-dev-server --mode development --hot --inline --open",
+    "build": "yarn run clean | webpack --mode production",
+    "deploy": "yarn run build && gh-pages -o github -d ./dist"
   },
   "repository": {
     "type": "git",
@@ -27,16 +28,18 @@
   },
   "license": "MIT",
   "homepage": "https://edixonalberto.github.io/libraries-js",
-  "dependencies": {},
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
   "devDependencies": {
     "@babel/core": "^7.6.0",
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
+    "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
-    "vue": "^2.6.10",
     "vue-loader": "^15.7.1",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.10",
